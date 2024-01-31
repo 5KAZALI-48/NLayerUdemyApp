@@ -18,6 +18,9 @@ namespace NLayer.Core
 
         public Catagory Catagory { get; set; }
 
+        public ProductFeature ProductFeature { get; set; }
+
+
 
     }
 }
