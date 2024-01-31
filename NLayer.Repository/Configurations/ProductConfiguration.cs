@@ -17,7 +17,7 @@ namespace NLayer.Repository.Configurations
             builder.Property(x => x.Id).UseIdentityColumn(1);
             builder.Property(x => x.Name).IsRequired().HasMaxLength(200);
             builder.Property(x => x.Stock).IsRequired();
-            builder.Property(x => x.Price).IsRequired().HasColumnType("decomal(18,2)");
+            builder.Property(x => x.Price).IsRequired().HasColumnType("decimal(18,2)");
             builder.ToTable("Products");
 
             builder.HasOne(x => x.Catagory).WithMany(x => x.Products).HasForeignKey(x => x.CatagoryId);
