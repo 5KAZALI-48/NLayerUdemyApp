@@ -10,6 +10,8 @@ namespace NLayer.Core.Repositories
     public interface IGenericRepository<T> where T: class
     {
         Task<T> GetByIdAsync(int id);
+        IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
+
 
         //productRepositry.where(x=>x.id>).OrderBy.ToListAsync();
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
