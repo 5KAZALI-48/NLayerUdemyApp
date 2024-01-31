@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLayer.Core;
+namespace NLayer.Core.Models;
 
 //cannot be instantiated 
 public abstract class BaseEntity
