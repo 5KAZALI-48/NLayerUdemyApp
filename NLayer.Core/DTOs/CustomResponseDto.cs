@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace NLayer.Core.DTOs
 {
-    internal class CustomResponseDto<T>
+    public class CustomResponseDto<T>
     {
         public T Data { get; set; }
 
         [JsonIgnore]
-        public int StatusCdoe { get; set; }
+        public int StatusCode { get; set; }
         public List<String> Errors { get; set; }
 
         public static CustomResponseDto<T> Success(int statusCode, T data)
@@ -20,7 +20,7 @@ namespace NLayer.Core.DTOs
             return new CustomResponseDto<T>
             {
                 Data = data,
-                StatusCdoe = statusCode
+                StatusCode = statusCode
                 
             };
         }
@@ -28,8 +28,8 @@ namespace NLayer.Core.DTOs
         {
             return new CustomResponseDto<T>
             {
-                
-                StatusCdoe = statusCode
+
+                StatusCode = statusCode
                
             };
         }
@@ -37,8 +37,8 @@ namespace NLayer.Core.DTOs
         {
             return new CustomResponseDto<T>
             {
-                
-                StatusCdoe = statusCode,
+
+                StatusCode = statusCode,
                 Errors = errors
             };
         }
@@ -48,7 +48,7 @@ namespace NLayer.Core.DTOs
             return new CustomResponseDto<T>
             {
 
-                StatusCdoe = statusCode,
+                StatusCode = statusCode,
                 Errors  = new List<string> { error }
             };
         }
