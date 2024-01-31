@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace NLayer.Core
 {
-    public class Catagory : BaseEntity
+    public class Product : BaseEntity
     {
         public string Name { get; set; }
+        public decimal Price { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public int Stock { get; set; }
+
+        public int CatagoryId { get; set; }
+
+
     }
 }
