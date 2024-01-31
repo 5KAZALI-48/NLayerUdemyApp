@@ -25,7 +25,22 @@ public class AppDbContext : DbContext
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-
+        modelBuilder.Entity<ProductFeature>().HasData(new ProductFeature
+        {
+            Id = 1,
+            Color = "Kirmizi",
+            Height = 100,
+            Width = 200,
+            ProductId = 1
+        }, new ProductFeature
+        {
+            Id = 2,
+            Color = "Mavi",
+            Height = 100,
+            Width = 200,
+            ProductId = 1
+        });
+        
         base.OnModelCreating(modelBuilder);
     }
 
