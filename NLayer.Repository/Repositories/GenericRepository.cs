@@ -36,7 +36,7 @@ namespace NLayer.Repository.Repositories
             return await _dbSet.AllAsync(expression);
         }
 
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> expression)
+        public IQueryable<T> GetAll()
         {
             return _dbSet.AsNoTracking().AsQueryable();
         }
