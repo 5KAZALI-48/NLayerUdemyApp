@@ -16,6 +16,8 @@ namespace NLayer.Core.Repositories
 
         Task AddAsync(T entity);
 
+        Task AddRangeAsync(IEnumerable<T> entities);
+
         Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
 
         void Update(T entity);
